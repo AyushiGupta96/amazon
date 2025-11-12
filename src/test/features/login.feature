@@ -8,5 +8,5 @@ Scenario Outline: User login with valid credentials.
   Then : user should be logged into amazon account
   Examples:
     | email | password |
-    |cciuikn@gmail.com|aaa|
-    |okijh@gmail.com  |bbb|
+    |aaa@gmail.com|aaa123|
+    |bbb@gmail.com  |bbb123|
