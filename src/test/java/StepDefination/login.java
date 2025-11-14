@@ -1,11 +1,11 @@
 package StepDefination;
-
+import pom.Login;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class login {
-
+    Login  loginPage;
     @Given(" I am on the amazon page")
     public void i_am_on_the_amazon_page() {
         // Write code here that turns the phrase above into concrete actions
@@ -14,9 +14,12 @@ public class login {
 
 
 
-    @When(" user enters <email> and <password>")
+    @When(" user enters {String} and {String}")
     public void user_enters_email_and_password(String email , String password) {
         // Write code here that turns the phrase above into concrete actions
+       loginPage = new Login();
+        loginPage.setEmail(email);
+        loginPage.setPassword(password);
         throw new io.cucumber.java.PendingException();
     }
 
@@ -29,13 +32,6 @@ public class login {
 
 
 
-    //Step undefined
-   // You can implement missing steps with the snippets below:
-    @When("user enters <email> and <password>")
-    public void user_enters_email_and_password() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
-    }
 
 
     //Step undefined

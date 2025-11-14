@@ -1,9 +1,6 @@
 package pom;
-import StepDefination.login;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -29,10 +26,11 @@ public class Login extends LaunchQuit{
     public void sign(){
         signinButton.click();
     }
-    public void setEmail(){
+    public void setEmail(String email){
         Email.sendKeys(email);
+
     }
-    public void setPassword(){
+    public void setPassword(String password){
         pass.sendKeys(password);
     }
     public void Login(EdgeDriver driver){
