@@ -3,6 +3,7 @@ package pom;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
@@ -14,7 +15,7 @@ public class SearchFilters {
     WebElement search;
     @FindBy(id="nav-search-dropdown-card")
     WebElement drop;
-    @FindBy(xpath = "(//span[@class='nav-search-submit-text nav-sprite nav-progressive-attribute'])")
+    @FindBy(xpath = "(//span[@class='a-button-text a-declarative'])")
     WebElement  sort;
     @FindBy(xpath = "//div[@class='a-popover-inner']")
     WebElement priceselect;
@@ -26,7 +27,7 @@ public class SearchFilters {
     }
     public void SearchFilter() throws InterruptedIOException, InterruptedException {
         Select s = new Select(drop);
-        Thread.sleep(30);
+        Thread.sleep(3000);
         s.selectByVisibleText("pen");
 
 
@@ -37,7 +38,7 @@ public class SearchFilters {
     public WebElement price(){
         return price;
     }
-    public SearchFilters(ChromeDriver driver){
+    public SearchFilters(EdgeDriver driver){
         PageFactory.initElements(driver,this);
     }
 }
