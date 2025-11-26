@@ -1,0 +1,20 @@
+package pom;
+
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+import java.security.Key;
+
+public class AddingCart {
+    @FindBy(id ="add-to-cart-button")
+    WebElement cart;
+    public void addCart(){
+        cart.sendKeys(Keys.ENTER);
+    }
+    public AddingCart(EdgeDriver driver){
+        PageFactory.initElements(driver,this);
+    }
+}
