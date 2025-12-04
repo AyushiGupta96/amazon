@@ -12,7 +12,7 @@ public class SearchProduct {
     public void search(String name){
         search.sendKeys(name+ Keys.ENTER);
     }
-    public void SearchProduct(ChromeDriver driver){
+    public void SearchProduct1(ChromeDriver driver){
         PageFactory.initElements(driver,this);
     }
 }
