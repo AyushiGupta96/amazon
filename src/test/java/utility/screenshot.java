@@ -21,7 +21,9 @@ public class screenshot implements ITestListener {
         File source = s.getScreenshotAs(OutputType.FILE);
         File destination = new File("E:\\intellij_install\\project\\amazon"+".png");
        try {
-           FileUtils.copyFile(source, destination);
+
+
+          FileUtils.copyFile(source, destination);
        }
        catch (IOException e){
 e.printStackTrace();
