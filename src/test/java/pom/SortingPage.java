@@ -1,9 +1,7 @@
 package pom;
 
-import io.cucumber.java.eo.Se;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -33,7 +31,7 @@ public class SortingPage {
         Thread.sleep(5000);
         s.selectByVisibleText(pen);
     }
-    public void sort(ChromeDriver driver){
+    public void sort(EdgeDriver driver){
         sort.click();
     }
     public void priceHigh() throws InterruptedException {
