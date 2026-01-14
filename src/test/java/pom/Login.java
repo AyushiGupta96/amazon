@@ -1,10 +1,15 @@
 package pom;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
+import Data.data;
+
+import static Data.data.password;
+import static Data.data.user_name;
 
 @Test
 public class Login extends LaunchQuit{
@@ -28,12 +33,12 @@ public class Login extends LaunchQuit{
     public void sign(){
         signinButton.click();
     }
-    public void setEmail(String email){
-        Email.sendKeys(email);
+    public void setEmail(){
+        Email.sendKeys(user_name+ Keys.ENTER);
 
     }
-    public void setPassword(String password){
-        pass.sendKeys(password);
+    public void setPassword(){
+        pass.sendKeys(password + Keys.ENTER);
     }
     public void Login(EdgeDriver driver){
         PageFactory.initElements(driver,this);

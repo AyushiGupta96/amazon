@@ -1,5 +1,6 @@
 package cases;
 
+import Data.data;
 import org.testng.annotations.Test;
 import pom.Login;
 import pom.payment;
@@ -9,14 +10,16 @@ import java.io.IOException;
 public class paymentPage extends start{
     @Test
     public void payment() throws IOException, InterruptedException {
+        data dt = new data();
+        dt.d();
         Login a = new Login();
         a.accountList(driver);
         Thread.sleep(3000);
         a.sign();
         Thread.sleep(3000);
-        a.setEmail(email);
+        a.setEmail();
         Thread.sleep(3000);
-        a.setPassword(password);
+        a.setPassword();
 
         payment p = new payment(driver);
         p.cart();
