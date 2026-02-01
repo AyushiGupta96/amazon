@@ -4,6 +4,8 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
+import static Data.data.user_name;
+
 public class login {
     Login  loginPage;
     @Given(" I am on the amazon page")
@@ -18,7 +20,7 @@ public class login {
     public void user_enters_email_and_password(String email , String password) {
         // Write code here that turns the phrase above into concrete actions
        loginPage = new Login();
-        loginPage.setEmail(email);
+        loginPage.setEmail(user_name);
         loginPage.setPassword(password);
         throw new io.cucumber.java.PendingException();
     }
